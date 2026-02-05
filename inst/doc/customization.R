@@ -22,6 +22,35 @@ knitr::opts_chunk$set(
 # # Dark card
 # card_dark <- svg_card(title = "PREMIUM", bg_color = "#2c3e50", ...)
 
+## ----gradient, eval=FALSE-----------------------------------------------------
+# # Horizontal gradient (left to right)
+# card <- svg_card(
+#   title = "HOUSING",
+#   bg_color = "linear-gradient(to right, #1a5a3a, #2e7d32)",
+#   ...
+# )
+# 
+# # Diagonal gradient (135 degrees)
+# card <- svg_card(
+#   title = "PROGRAM",
+#   bg_color = "linear-gradient(135deg, #667eea, #764ba2)",
+#   ...
+# )
+# 
+# # Vertical gradient (top to bottom)
+# card <- svg_card(
+#   title = "PROJECT",
+#   bg_color = "linear-gradient(to bottom, #00c6ff, #0072ff)",
+#   ...
+# )
+# 
+# # Multi-color gradient
+# card <- svg_card(
+#   title = "RAINBOW",
+#   bg_color = "linear-gradient(to right, #ff6b6b, #feca57, #48dbfb)",
+#   ...
+# )
+
 ## ----text-colors, eval=FALSE--------------------------------------------------
 # card <- svg_card(
 #   title = "MY CARD",

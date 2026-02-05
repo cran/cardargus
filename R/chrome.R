@@ -28,8 +28,7 @@ chrome_available <- function(verbose = FALSE) {
   }
   
   tryCatch({
-    path <- chromote::find_chrome()
-    if (verbose) cli::cli_alert_success("Chrome found: {.path {path}}")
+    if (verbose) cli::cli_alert_success("Chrome found: {.path {find_chrome_path()}}")
     TRUE
   }, error = function(e) {
     if (verbose) cli::cli_alert_warning("Chrome not found: {e$message}")
@@ -138,8 +137,7 @@ ensure_chrome <- function(download = FALSE, verbose = TRUE) {
   # Check if already available
   if (chrome_available(verbose = FALSE)) {
     if (verbose) {
-      path <- find_chrome_path()
-      cli::cli_alert_success("Chrome is available: {.path {path}}")
+      cli::cli_alert_success("Chrome is available: {.path {find_chrome_path()}}")
     }
     return(TRUE)
   }

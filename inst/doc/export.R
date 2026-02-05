@@ -125,7 +125,7 @@ knitr::opts_chunk$set(
 
 ## ----engine, eval=FALSE-------------------------------------------------------
 # # Register the cardargus engine
-# register_knitr_engine()
+# register_cardargus_knitr()
 # 
 # # Then in a chunk with engine='cardargus':
 # # ```{cardargus}

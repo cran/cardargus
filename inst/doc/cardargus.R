@@ -51,7 +51,7 @@ knitr::opts_chunk$set(
 
 ## ----engine, eval=FALSE-------------------------------------------------------
 # # In setup chunk
-# register_knitr_engine()
+# register_cardargus_knitr()
 # 
 # # Then use cardargus chunks:
 # # ```{cardargus}
