@@ -37,7 +37,7 @@ Alternatively, you can:
 ensure_chrome()
 
 # Download Chrome if not available
-\dontrun{ # Requires an external Chrome/Chromium installation 
+\dontrun{
 ensure_chrome(download = TRUE)
 }
 }

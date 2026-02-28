@@ -9,7 +9,7 @@ svg_to_png_chrome(
   output_path = NULL,
   dpi = 300,
   background = "transparent",
-  timeout = 30
+  load_wait = 0.5
 )
 }
 \arguments{
@@ -23,7 +23,8 @@ so dpi = 300 results in approximately 3.125x scaling.}
 \item{background}{Background color for the HTML page (default "transparent").
 Use "white", "#FFFFFF", etc. for a solid background.}
 
-\item{timeout}{Maximum time in seconds to wait for page load (default 30).}
+\item{load_wait}{Seconds to wait for page to load (default 0.5).
+Increase if fonts are not rendering correctly.}
 }
 \value{
 Path to the generated PNG file.
@@ -36,8 +37,7 @@ as Chrome properly handles @font-face rules, web fonts, and CSS features.
 \examples{
 svg <- svg_card("FAR", list(), list())
 file_name <- tempfile(fileext = ".png")
-# High-quality PNG with Chrome rendering
-\dontrun{ # Requires an external Chrome/Chromium installation.
+\dontrun{
 if (chrome_available()) {
   png_path <- svg_to_png_chrome(svg, file_name, dpi = 300)
 }
