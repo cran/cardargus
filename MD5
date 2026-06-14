@@ -1,12 +1,12 @@
-6a6e7fdb0b29c6d85e9485c7825e631d *DESCRIPTION
+58977890118c8b286429ab111960d5b9 *DESCRIPTION
 1cd3f989c5f8b64621578fb2b11f76bd *LICENSE
 d02e43e017c37461c0ff2d49fad6c84d *NAMESPACE
-559a6aded4685095bf6ad6d3fe1d4c2e *NEWS.md
+39b4a9787c6d24a6a717c5e071f90412 *NEWS.md
 a1f9da0afa45233c8acb90d9257e7444 *R/badges.R
 c4c58f4fd9e95deb86bedf611c51cc8e *R/cards.R
 5794744c63c7246dbfde45b35b1e35e7 *R/chrome.R
 e12c1282b5b18a635511adc8c91fdc88 *R/conversion.R
-71168b82b0865f6e59d8eb1ca26bd245 *R/fonts.R
+a723f4fd33bdfbe73d3f272b35107279 *R/fonts.R
 3a9ef16cb8a3217df4ff4fba474618f2 *R/knitr.R
 c4e8868297e8594d3863fb9d49f2a147 *R/logos.R
 b8940c68f939f01173a87df063073963 *R/utils.R
@@ -66,7 +66,7 @@ da288cdd841b766c112d2edfce19dbe3 *man/figures/logo.svg
 534c52bee21e11eebfe1ab58ae0ebab8 *man/find_chrome_in_dir.Rd
 b85a9596b46ac7f4f8ed0104a4dd38a7 *man/find_chrome_path.Rd
 c813b8b5ca35c1513c741dd9b29eb636 *man/font_available.Rd
-9a6a8e472ffa4c6c186b8cfa5128348c *man/font_cache_dir.Rd
+5050d02b42e63bf805a19dfbfc3c869e *man/font_cache_dir.Rd
 68d436d77d1fb69b0d085ab404e73c13 *man/font_cache_path.Rd
 ca4f65b0e6409bb02903c9b8842c82e4 *man/generate_id.Rd
 3fd69a12f9bb16b7fea16c263af6d093 *man/get_chrome_download_info.Rd
@@ -93,6 +93,7 @@ a23079ec02c7936271127b4810afe1e9 *man/prepare_svg_for_raster.Rd
 d047f6006ae268fc6b8d444b080093cd *man/register_cardargus_knitr.Rd
 0889fed4842124e111d56a907e346d44 *man/register_font.Rd
 d511b117f047af98d78c1c04ea264e2a *man/register_google_font.Rd
+e252df54a0fcc126612dc67f700581dc *man/running_under_check.Rd
 d8c298f72b3765e941e479b4ce99d4b5 *man/sanitize_svg_for_raster.Rd
 4b9d1505f5bfabc97c8d0b72c8624fa0 *man/sanitize_svg_metadata.Rd
 29fc4b0731710b13ef4405287400427a *man/save_card_for_knitr.Rd
@@ -121,6 +122,7 @@ a37e38751124ae55a903d05ca353e542 *man/wrap_text.Rd
 e941fb497687f9686975780e38b3c3b3 *tests/testthat.R
 1274d46dae8d882fff2f48f8ca669218 *tests/testthat/test-badges.R
 01f87d48edf4e97ab2227cb89187413a *tests/testthat/test-conversion.R
+b4c8fd7a0211dd3b5a0a8f4037468c61 *tests/testthat/test-fonts.R
 f0c20e3d38873b773c9810ac16b32fbc *tests/testthat/test-utils.R
 a31f7d4617b04d094259f22fd9d3bd13 *tests/testthat/test-xml-utils.R
 9a512cc678b9c3a00ccb7d73d6396e22 *vignettes/badges.Rmd

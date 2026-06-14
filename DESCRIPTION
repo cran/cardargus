@@ -1,7 +1,7 @@
 Package: cardargus
 Title: Generate SVG Information Cards with Embedded Fonts and Badges
-Version: 0.2.3
-Date: 2026-06-13
+Version: 0.2.4
+Date: 2026-06-14
 Authors@R: c(
     person("Andre", "Leite", email = "leite@castlab.org", role = c("aut", "cre")),
     person("Hugo", "Vasconcelos", email = "hugo.vasconcelos@ufpe.br", role = "aut"),
@@ -25,10 +25,10 @@ Config/testthat/edition: 3
 VignetteBuilder: knitr
 Config/roxygen2/version: 8.0.0
 NeedsCompilation: no
-Packaged: 2026-06-14 14:14:17 UTC; leite
+Packaged: 2026-06-14 14:51:56 UTC; leite
 Author: Andre Leite [aut, cre],
   Hugo Vasconcelos [aut],
   Diogo Bezerra [aut]
 Maintainer: Andre Leite <leite@castlab.org>
 Repository: CRAN
-Date/Publication: 2026-06-14 15:00:02 UTC
+Date/Publication: 2026-06-14 17:30:06 UTC
