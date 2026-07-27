@@ -8,7 +8,7 @@
 \description{
 \if{html}{\figure{logo.svg}{options: style='float: right' alt='logo' width='120'}}
 
-Create self-contained SVG information cards with embedded 'Google Fonts', shields-style badges, and custom logos. Cards are fully portable SVG files ideal for dashboards, reports, and web applications. Includes functions to export cards to PNG format and display them in 'R Markdown' and 'Quarto' documents.
+Create self-contained SVG information cards with embedded 'Google Fonts', shields-style badges, and custom logos. Cards are fully portable SVG files ideal for dashboards, reports, and web applications. Includes functions to export cards to PNG and PDF formats and display them in 'R Markdown' and 'Quarto' documents.
 }
 \seealso{
 Useful links:
@@ -25,7 +25,9 @@ Useful links:
 Authors:
 \itemize{
   \item Andre Leite \email{leite@castlab.org}
+  \item Marcos Wasiliew \email{marcos.wasilew@gmail.com}
   \item Hugo Vasconcelos \email{hugo.vasconcelos@ufpe.br}
+  \item Carlos Amorim \email{carlos.agaf@ufpe.br}
   \item Diogo Bezerra \email{diogo.bezerra@ufpe.br}
 }
 

@@ -67,15 +67,28 @@ knitr::opts_chunk$set(
 #   dpi = 300
 # )
 
+## ----pdf-basic, eval=FALSE----------------------------------------------------
+# # Vector PDF (via rsvg)
+# svg_to_pdf(card, "my_card.pdf")
+
+## ----pdf-chrome, eval=FALSE---------------------------------------------------
+# if (chrome_available()) {
+#   svg_to_pdf_chrome(card, "my_card.pdf")
+# }
+
+## ----pdf-knitr, eval=FALSE----------------------------------------------------
+# # Saves card.pdf using Chrome when available, else rsvg
+# save_card_for_knitr(card, format = "pdf")
+
 ## ----formats, eval=FALSE------------------------------------------------------
-# # Export to SVG and PNG
+# # Export to SVG, PNG and (vector) PDF
 # svg_to_formats(
 #   card,
 #   output_base = "exports/my_card",  # Without extension
-#   formats = c("svg", "png"),
+#   formats = c("svg", "png", "pdf"),
 #   dpi = 300
 # )
-# # Creates: exports/my_card.svg, exports/my_card.png
+# # Creates: exports/my_card.svg, exports/my_card.png, exports/my_card.pdf
 
 ## ----batch, eval=FALSE--------------------------------------------------------
 # # Create multiple cards

@@ -1,3 +1,60 @@
+# cardargus 0.2.5
+
+## New features
+
+* `svg_to_pdf()` exports a card to a **vector** PDF via `rsvg::rsvg_pdf()`,
+  mirroring `svg_to_png()` (sanitizes the SVG and embeds WOFF2 fonts). For
+  Chrome-based rendering, `svg_to_pdf_chrome()` remains available (#17).
+* `save_card_for_knitr()` now accepts `format = "pdf"` (in addition to `"svg"`
+  and `"png"`), using Chrome when available and `svg_to_pdf()` otherwise.
+
+## Chrome rendering: more robust, faster, higher quality
+
+The Chrome-based conversion pipeline (`svg_to_png_chrome()`,
+`svg_to_pdf_chrome()`, `batch_svg_to_*_chrome()`) was reworked:
+
+* **Deterministic readiness wait.** Conversions no longer rely on a fixed
+  `Sys.sleep()`: the page load event and `document.fonts.ready` are awaited,
+  so screenshots/PDFs are never captured before web fonts finish rendering,
+  and no time is wasted over-waiting. The `load_wait` argument now means an
+  *extra* wait after readiness and defaults to 0; a new `timeout` argument
+  (default 10s) bounds the readiness wait.
+* **Persistent Chrome session.** A single health-checked session is reused
+  across calls (and replaced transparently if it dies), removing the ~1-2s
+  session startup previously paid on every conversion. The session is closed
+  when the package is unloaded.
+* **No temp files.** Pages are loaded via `data:` URLs instead of temporary
+  HTML files and `file://` navigation (a temp file is used only for very
+  large documents), avoiding path/permission issues on Windows.
+* **Real alpha transparency.** With `background = "transparent"`,
+  `svg_to_png_chrome()` now produces a PNG with a true alpha channel
+  (previously the backdrop was flattened).
+
+## Minor improvements
+
+* `svg_to_formats(formats = "pdf")` now reuses `svg_to_pdf()` for the vector path
+  and warns explicitly when it falls back to a rasterized PDF via `magick`.
+
+## Bug fixes
+
+* `magick` and `rsvg` moved from `Imports` to `Suggests`: they are only needed
+  for raster/PDF export, which is already guarded by `requireNamespace()`. This
+  lightens the install footprint and matches the package's "heavy deps in
+  Suggests" convention (#19).
+* `svg_card()` now sizes badges using `value_fontsize` instead of a hard-coded
+  `10`, preventing clipped/misaligned badge text when `value_fontsize` differs
+  from 10 (#18).
+* `is_light_color()` now reports an unknown color name with a clear `cli` error
+  instead of letting `col2rgb()` raise a raw base error (#20).
+* `.onLoad()` no longer tries to download the Jost font from Google Fonts when
+  it is not installed on the system. Network access at load time is against
+  CRAN policy and produced a non-suppressible startup message on machines
+  without the font (the cause of the spurious WARNINGs on the CRAN
+  r-oldrel-macos-arm64 checks for 0.2.4). Fonts are registered on demand when
+  a card is rendered, as before.
+* The GitHub stars badge in the README now links to the repository root: the
+  `/stargazers` page answers 404 to the HEAD requests CRAN's URL checker uses.
+
 # cardargus 0.2.4
 
 ## CRAN policy fix
