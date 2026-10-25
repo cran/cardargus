@@ -513,6 +513,23 @@ files:</p>
 <span id="cb8-12"><a href="#cb8-12" tabindex="-1"></a>  ...</span>
 <span id="cb8-13"><a href="#cb8-13" tabindex="-1"></a>)</span></code></pre></div>
 </div>
+<div id="sparklines" class="section level2">
+<h2>Sparklines</h2>
+<p><code>create_sparkline()</code> turns a numeric vector into a small
+line, area or bar chart as a standalone SVG string — usable anywhere a
+raw SVG is accepted (<code>with_icon</code>, <code>logos</code>,
+<code>bottom_logos</code>):</p>
+<div class="sourceCode" id="cb9"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb9-1"><a href="#cb9-1" tabindex="-1"></a>spark <span class="ot">&lt;-</span> <span class="fu">create_sparkline</span>(<span class="fu">c</span>(<span class="dv">3</span>, <span class="dv">5</span>, <span class="dv">2</span>, <span class="dv">8</span>, <span class="dv">7</span>), <span class="at">color =</span> <span class="st">&quot;white&quot;</span>)</span>
+<span id="cb9-2"><a href="#cb9-2" tabindex="-1"></a></span>
+<span id="cb9-3"><a href="#cb9-3" tabindex="-1"></a>fields <span class="ot">&lt;-</span> <span class="fu">list</span>(</span>
+<span id="cb9-4"><a href="#cb9-4" tabindex="-1"></a>  <span class="fu">list</span>(<span class="fu">list</span>(<span class="at">label =</span> <span class="st">&quot;Tendência&quot;</span>, <span class="at">value =</span> <span class="st">&quot;Alta&quot;</span>, <span class="at">with_icon =</span> spark))</span>
+<span id="cb9-5"><a href="#cb9-5" tabindex="-1"></a>)</span>
+<span id="cb9-6"><a href="#cb9-6" tabindex="-1"></a>card <span class="ot">&lt;-</span> <span class="fu">svg_card</span>(<span class="st">&quot;Vendas&quot;</span>, <span class="at">fields =</span> fields)</span>
+<span id="cb9-7"><a href="#cb9-7" tabindex="-1"></a></span>
+<span id="cb9-8"><a href="#cb9-8" tabindex="-1"></a><span class="co"># Variants</span></span>
+<span id="cb9-9"><a href="#cb9-9" tabindex="-1"></a><span class="fu">create_sparkline</span>(<span class="fu">c</span>(<span class="dv">1</span>, <span class="dv">4</span>, <span class="dv">2</span>, <span class="dv">6</span>), <span class="at">type =</span> <span class="st">&quot;area&quot;</span>, <span class="at">color =</span> <span class="st">&quot;#0ea5e9&quot;</span>)</span>
+<span id="cb9-10"><a href="#cb9-10" tabindex="-1"></a><span class="fu">create_sparkline</span>(<span class="fu">c</span>(<span class="dv">5</span>, <span class="dv">2</span>, <span class="dv">8</span>, <span class="dv">3</span>, <span class="dv">7</span>), <span class="at">type =</span> <span class="st">&quot;bar&quot;</span>)</span></code></pre></div>
+</div>
 <div id="summary-how-to-use-icons-and-logos" class="section level2">
 <h2>Summary: How to use icons and logos</h2>
 <table>
@@ -546,6 +563,10 @@ files:</p>
 <tr class="even">
 <td>SVG string</td>
 <td><code>logos = list(&#39;&lt;svg&gt;...&lt;/svg&gt;&#39;)</code></td>
+</tr>
+<tr class="odd">
+<td>Sparkline</td>
+<td><code>with_icon = create_sparkline(c(1, 2, 3))</code></td>
 </tr>
 </tbody>
 </table>

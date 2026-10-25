@@ -17,6 +17,12 @@ knitr::opts_chunk$set(
 # # Save to file (with embedded fonts)
 # save_svg(card, "my_card.svg")
 
+## ----svg-subset, eval=FALSE---------------------------------------------------
+# save_svg(card, "my_card.svg", subset_fonts = TRUE)
+# 
+# # Also available in svg_to_formats()
+# svg_to_formats(card, "my_card", formats = c("svg", "png"), subset_fonts = TRUE)
+
 ## ----png-basic, eval=FALSE----------------------------------------------------
 # # Convert SVG string to PNG
 # svg_to_png(card, "my_card.png")

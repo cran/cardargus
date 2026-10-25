@@ -62,6 +62,28 @@ knitr::opts_chunk$set(
 #   ...
 # )
 
+## ----themes, eval=FALSE-------------------------------------------------------
+# # Available presets
+# card_themes()
+# #> "default" "light" "dark" "slate" "ocean" "forest" "sunset" "violet"
+# 
+# # Apply a preset
+# card <- svg_card(title = "PREMIUM", theme = "dark", ...)
+# 
+# # Customize a preset with card_theme()
+# my_theme <- card_theme("ocean", footer_color = "#cceeff")
+# card <- svg_card(title = "REPORT", theme = my_theme, ...)
+# 
+# # Explicit arguments override the theme
+# card <- svg_card(title = "ALERT", theme = "dark", bg_color = "#e74c3c", ...)
+
+## ----a11y, eval=FALSE---------------------------------------------------------
+# card <- svg_card(
+#   title = "FAR",
+#   alt = "Card com os indicadores do programa FAR em 2026",
+#   ...
+# )
+
 ## ----fonts, eval=FALSE--------------------------------------------------------
 # # Using Roboto
 # card <- svg_card(

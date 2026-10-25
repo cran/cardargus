@@ -153,3 +153,15 @@ knitr::opts_chunk$set(
 #   ...
 # )
 
+## ----sparklines, eval=FALSE---------------------------------------------------
+# spark <- create_sparkline(c(3, 5, 2, 8, 7), color = "white")
+# 
+# fields <- list(
+#   list(list(label = "Tendência", value = "Alta", with_icon = spark))
+# )
+# card <- svg_card("Vendas", fields = fields)
+# 
+# # Variants
+# create_sparkline(c(1, 4, 2, 6), type = "area", color = "#0ea5e9")
+# create_sparkline(c(5, 2, 8, 3, 7), type = "bar")
+
